@@ -4,6 +4,8 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <display-name>App servlet</display-name>
+
     <!-- If you do not want to go with default filename as [servlet-name]-servlet.xml and default location as /WEB-INF -->
     <!-- you can customize this file name and location by adding the servlet listener ContextLoaderListener in your web.xml file as follows -->
     <listener>
@@ -24,4 +26,14 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!-- defaults -->
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
+
+    <!-- error handling -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404</location>
+    </error-page>
 </web-app>

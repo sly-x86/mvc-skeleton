@@ -13,8 +13,8 @@ public class HomeController {
     User user;
 
     @RequestMapping(value = "/")
-    public String welcome(ModelMap model) {
+    public String index(ModelMap model) {
         model.addAttribute("login", user.login);
-        return "home";
+        return "home/index";
     }
 }
